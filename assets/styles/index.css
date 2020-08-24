@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Pacifico', cursive;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background-color: violet;
+    margin-bottom: 5%;
+    margin-top: -1%;
+}
+
+.taskList {
+    text-align: center;
+}
+
+.input {
+    width: 30%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.addButton {
+    cursor: pointer;
+    outline: none;
+    margin-left: -46px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    position: relative;
+    top: 5px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.addButton:hover {
+    background-color: gainsboro;
+}
+
+.tasks {
+    position: relative;
+    top: 5px;
+    width: 27%;
+    margin: auto;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.tasks:last-of-type {
+    margin-bottom: 25px;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+    border: 1px solid rgb(172, 171, 171);
+    border-radius: 100%;
+    float: left;
+    transition: all 0.4s ease;
+}
+
+.checked {
+    background-color: rgb(55, 161, 180);
+    border-color: rgb(55, 161, 180);
+    transition: all 0.4s ease;
+}
+
+.textChecked {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    color: rgb(107, 107, 107);
+}
+
+.checkbox::before {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    left: 3.7px;
+    width: 10px;
+    height: 4px;
+    content: "";
+    border-width: 0 0 3px 3px;
+    border-style: solid;
+    transform: rotate(-45deg);
+    border-color: white;
+}
+
+.checked::before {
+    visibility: visible;
+    border-color: white;
+}
+
+.deleteButton {
+    cursor: pointer;
+    outline: none;
+    color: crimson;
+    border-style: none;
+    background-color: inherit;
+    float: right;
+}
+
+.editButton {
+    cursor: pointer;
+    outline: none;
+    color: initial;
+    border-style: none;
+    background-color: inherit;
+    float: right;
+}
+
+.finishEditButton {
+    display: none;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-style: unset;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 3px 6px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+.finishEditButton:hover {
+    background-color: #3454ce;
+}
+
+.deleteButton:hover {
+    color: darkred;
+}
+
+.editButton:hover {
+    color: inherit;
+}
+
+@media all and (max-width: 480px) {
+    .input {
+        width: 70%;
+    }
+
+    .tasks {
+        width: 56%;
+    }
+}
